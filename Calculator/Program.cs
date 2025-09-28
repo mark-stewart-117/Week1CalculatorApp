@@ -1,15 +1,37 @@
-﻿// Variable names should be short and meaningful
+﻿using System.Xml.Serialization;
 
-//Ask for input for first number
-Console.WriteLine("Type in the first number followed by the Enter key");
-int firstNumber = Convert.ToInt32(Console.ReadLine());
+CalculatorApp();
 
-//Ask for input for second number
-Console.WriteLine("Type in the second number followed by the Enter key");
-int secondNumber = Convert.ToInt32(Console.ReadLine());
+void CalculatorApp()
+{
+    // Declare variables and initalise them to 0.
+    int firstNumber = 0;
+    int secondNumber = 0;
+    int result = 0;
+    int choice = 0;
 
-//Perform calculation
-int result = firstNumber + secondNumber;
+    //Ask for input for first number
+    Console.WriteLine("Type in the first number followed by the Enter key");
+     firstNumber = Convert.ToInt32(Console.ReadLine());
 
-//Output answer
-Console.WriteLine("Adding {0} and {1} give the answer {2}", firstNumber, secondNumber, result);
+    //Ask for input for second number
+    Console.WriteLine("Type in the second number followed by the Enter key");
+     secondNumber = Convert.ToInt32(Console.ReadLine());
+
+    //Use a loop to make the relevant decision
+    //and perform the maths operation
+    Console.WriteLine("Choose an option from the following list:");
+    Console.WriteLine("1 - Add");
+    Console.WriteLine("2 - Subtract");
+    Console.WriteLine("3 - Multiply");
+    Console.WriteLine("4 - Divide");
+
+    //Convert string to integer
+    choice = Convert.ToInt32(Console.ReadLine());
+
+    //Perform calculation
+     result = firstNumber + secondNumber;
+
+    //Output answer
+    Console.WriteLine("The result is {result}", result);
+}
