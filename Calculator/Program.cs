@@ -23,8 +23,8 @@ void CalculatorApp()
     Console.WriteLine("Choose an option from the following list:");
     Console.WriteLine("1 - Add");
     Console.WriteLine("2 - Subtract");
-    Console.WriteLine("3 - Multiply");
-    Console.WriteLine("4 - Divide");
+    Console.WriteLine("3 - Divide");
+    Console.WriteLine("4 - Multiply");
 
     //Convert string to integer
     choice = Convert.ToInt32(Console.ReadLine());
@@ -54,6 +54,6 @@ void CalculatorApp()
     {
         Console.WriteLine("You did not select a valid number between 1-4");
     }
-        //Output answer
-        Console.WriteLine("The result is {result}", result);
+    //Output answer
+    Console.WriteLine("The result is ", result);
 }
